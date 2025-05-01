@@ -19,6 +19,7 @@ function AddMemberPage() {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const [submitMessage, setSubmitMessage] = useState({ type: "", message: "" });
+  const [dragActive, setDragActive] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,6 +28,49 @@ function AddMemberPage() {
     if (errors[name]) {
       setErrors({ ...errors, [name]: "" });
     }
+  };
+
+  const handleDrag = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.type === "dragenter" || e.type === "dragover") {
+      setDragActive(true);
+    } else if (e.type === "dragleave") {
+      setDragActive(false);
+    }
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      const droppedFile = e.dataTransfer.files[0];
+      if (droppedFile && validateFile(droppedFile)) {
+        setFile(droppedFile);
+        const reader = new FileReader();
+        reader.onload = () => setPreview(reader.result);
+        reader.readAsDataURL(droppedFile);
+        setErrors({ ...errors, profileImage: "" });
+      }
+    }
+  };
+
+  const validateFile = (file) => {
+    const validTypes = ["image/jpeg", "image/png", "image/gif"];
+    if (!validTypes.includes(file.type)) {
+      setErrors({
+        ...errors,
+        profileImage: "Invalid file type (JPEG, PNG, GIF only)",
+      });
+      return false;
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      setErrors({ ...errors, profileImage: "File size exceeds 5MB limit" });
+      return false;
+    }
+    return true;
   };
 
   const handleFileChange = (e) => {
@@ -330,16 +374,33 @@ function AddMemberPage() {
                 <div className="file-upload-container">
                   <div
                     className={`file-upload ${errors.profileImage ? "error" : ""}`}
+                    onDragEnter={handleDrag}
+                    onDragLeave={handleDrag}
+                    onDragOver={handleDrag}
+                    onDrop={handleDrop}
                     onClick={() =>
                       document.getElementById("profileImage").click()
                     }
                   >
                     {preview ? (
-                      <img
-                        src={preview}
-                        alt="Profile preview"
-                        className="image-preview"
-                      />
+                      <div className="preview-container">
+                        <button
+                          type="button"
+                          className="remove-image"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setFile(null);
+                            setPreview(null);
+                          }}
+                        >
+                          x
+                        </button>
+                        <img
+                          src={preview}
+                          alt="Profile preview"
+                          className="image-preview"
+                        />
+                      </div>
                     ) : (
                       <div className="upload-placeholder">
                         <span className="upload-icon">📷</span>
