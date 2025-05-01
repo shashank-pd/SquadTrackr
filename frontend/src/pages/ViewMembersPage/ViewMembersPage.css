@@ -19,15 +19,16 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	gap: 2rem;
+	padding: 1rem;
 }
 
 .member-card {
+	position: relative;
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
-	transition: var(--transition);
-	transform: translateY(0);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .member-card:hover {
@@ -36,29 +37,41 @@
 }
 
 .member-image-container {
-	height: 200px;
+	position: relative;
+	width: 100%;
+	padding-top: 100%;
+	background-color: #f8fafc;
 	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #f1f5f9;
 }
 
 .member-image {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	object-position: center top;
+	transition: transform 0.3s ease;
+}
+
+
+.member-card:hover .member-image {
+	transform: scale(1.05);
 }
 
 .member-image-placeholder {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	background-color: var(--primary-light);
+	justify-content: center;
+	background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
 	color: white;
-	font-size: 4rem;
+	font-size: 2.5rem;
 	font-weight: bold;
 }
 
@@ -171,11 +184,42 @@
 
 @media (max-width: 768px) {
 	.members-grid {
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		gap: 1.5rem;
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+		gap: 1rem;
+		padding: 0.5rem;
+	}
+
+	.member-info {
+		padding: 1rem;
+	}
+
+	.member-name {
+		font-size: 1.1rem;
+	}
+
+	.member-role {
+		font-size: 0.9rem;
+	}
+
+	.btn-view {
+		padding: 0.4rem 0.8rem;
+		font-size: 0.9rem;
+	}
+
+	.member-image {
+		object-position: center center;
+		/* Adjust for mobile */
+	}
+}
+
+@media (max-width: 480px) {
+	.members-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.75rem;
 	}
 
 	.member-image-container {
-		height: 160px;
+		padding-top: 120%;
+		/* Slightly taller aspect ratio */
 	}
 }

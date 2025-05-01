@@ -1,20 +1,29 @@
 [
   {
-    "regNo": "RA2211027010232",
+    "regNo": "RA2211027010228",
     "name": "Devansh Patel",
     "role": "UI/UX Designer",
-    "email": "dp2345@srmist.edu.in",
-    "profileImage": "uploads/default-profile-2.jpg",
+    "email": "dp4555@srmist.edu.in",
+    "profileImage": "uploads/default-profile-1.jpeg",
     "bio": "Creative designer passionate about user experience and accessibility",
-    "phone": "5559876543"
+    "phone": "8857842924"
   },
   {
-    "regNo": "RA2211027010233",
+    "regNo": "RA2211027010231",
+    "name": "Ayush Singh",
+    "role": "Software Engineer",
+    "email": "as6402@srmist.edu.in",
+    "profileImage": "uploads/default-profile-2.png",
+    "bio": "Full-stack developer with expertise in React and Node.js",
+    "phone": "9752939551"
+  },
+  {
+    "regNo": "RA2211027010234",
     "name": "Shashank Prasad",
     "role": "Project Manager",
-    "email": "sp6789@srmist.edu.in",
-    "profileImage": "uploads/default-profile-3.jpg",
+    "email": "sp0261@srmist.edu.in",
+    "profileImage": "uploads/default-profile-3.jpeg",
     "bio": "Experienced project manager with a background in agile methodologies",
-    "phone": "5554567890"
+    "phone": "9452678178"
   }
 ]

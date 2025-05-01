@@ -69,7 +69,8 @@ function ViewMembersPage() {
                       className="member-image"
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = "/api/placeholder/150/150";
+                        e.target.src = "/placeholder-user.jpg";
+                        e.target.style.objectFit = "contain";
                       }}
                     />
                   ) : (
