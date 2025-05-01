@@ -1,4 +1,4 @@
-import Member from "../models/Member.js";
+import { Member } from "../models/Member.js";
 
 // @desc    Get all members
 // @route   GET /members

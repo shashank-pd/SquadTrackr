@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import { initializeDatabase } from "./scripts/initDb.js";
+import router from "./routers/memberRouter.js";
 
 dotenv.config();
 
@@ -14,6 +15,12 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 connectDB();
+
+app.get("/", (req, res) => {
+  res.send("Team Members API is running");
+});
+
+app.use("/api/members", router);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
