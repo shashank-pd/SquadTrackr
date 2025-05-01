@@ -14,7 +14,6 @@ function ViewMembersPage() {
       try {
         setLoading(true);
         const response = await axios.get(`${BACKEND_URL}/api/members`);
-        console.log(response);
         setMembers(response.data);
         setError(null);
       } catch (error) {
