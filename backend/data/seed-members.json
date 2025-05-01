@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Ayush Singh",
+    "role": "Software Engineer",
+    "email": "as6402@srmist.edu.in",
+    "profileImage": "uploads/default-profile-1.jpg",
+    "bio": "Full-stack developer with expertise in React and Node.js",
+    "phone": "9752939551"
+  },
+  {
+    "name": "Devansh Patel",
+    "role": "UI/UX Designer",
+    "email": "dp",
+    "profileImage": "uploads/default-profile-2.jpg",
+    "bio": "Creative designer passionate about user experience and accessibility",
+    "phone": "555-987-6543"
+  },
+  {
+    "name": "Shashank Prasad",
+    "role": "Project Manager",
+    "email": "alex@example.com",
+    "profileImage": "uploads/default-profile-3.jpg",
+    "bio": "Experienced project manager with a background in agile methodologies",
+    "phone": "555-456-7890"
+  }
+]
