@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./AddMemberPage.css";
@@ -20,6 +20,8 @@ function AddMemberPage() {
   const [errors, setErrors] = useState({});
   const [submitMessage, setSubmitMessage] = useState({ type: "", message: "" });
   const [dragActive, setDragActive] = useState(false);
+
+  const fileInputRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -237,6 +239,17 @@ function AddMemberPage() {
     }
   };
 
+  // Handle removing uploaded image
+  const handleRemove = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setFile(null);
+    setPreview(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  };
+
   return (
     <div className="add-member-page">
       <div className="card">
@@ -387,11 +400,7 @@ function AddMemberPage() {
                         <button
                           type="button"
                           className="remove-image"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setFile(null);
-                            setPreview(null);
-                          }}
+                          onClick={handleRemove}
                         >
                           x
                         </button>
@@ -415,6 +424,7 @@ function AddMemberPage() {
                     accept="image/jpeg,image/png,image/gif"
                     onChange={handleFileChange}
                     style={{ display: "none" }}
+                    ref={fileInputRef}
                   />
                   {errors.profileImage && (
                     <span className="error-message">{errors.profileImage}</span>
