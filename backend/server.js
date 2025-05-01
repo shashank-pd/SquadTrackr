@@ -22,6 +22,9 @@ app.get("/", (req, res) => {
 
 app.use("/api/members", router);
 
+// Serve static files from the uploads directory
+app.use("/uploads", express.static("uploads"));
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
