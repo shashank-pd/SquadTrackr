@@ -75,23 +75,31 @@ A full-stack web application developed to manage student team members efficientl
 > ### Add Member Page  
 > <img src="https://github.com/user-attachments/assets/33823621-2ff9-48c1-9f48-06f0036f6b98" width="700"/>
 
-> ### View Members Page  
+> ### Member Details Page 
 > <img src="https://github.com/user-attachments/assets/3b7fa4d2-1120-4b4d-87db-b86d806c305a" width="700"/>
 
-> ### Member Details Page  
+
+> ### View Members Page  
 > <img src="https://github.com/user-attachments/assets/5e17d81a-a90a-4f73-ae11-1d98b9910dad" width="700"/>
 
-> ### Members Page (Mobile View)  
-> <img src="https://github.com/user-attachments/assets/c289ddf9-079c-4189-bc93-ef8ea87d5414" width="300"/>
 
-> ### Add Team Member (Mobile View)  
-> <img src="https://github.com/user-attachments/assets/ce0bcb98-788b-43ec-b89f-a6c1c0f4ed02" width="300"/>
 
 > ### Landing Page (Mobile View)  
 > <img src="https://github.com/user-attachments/assets/3ea16ede-da4b-4411-a817-d1cd84899714" width="300"/>
 
+> ### Add Team Member (Mobile View)  
+> <img src="https://github.com/user-attachments/assets/ce0bcb98-788b-43ec-b89f-a6c1c0f4ed02" width="300"/>
+
+
 > ### Member Details Page (Mobile View)  
-> <img src="https://github.com/user-attachments/assets/6e615ec9-a006-4ec3-905b-122cb65f4f4c" width="300"/>
+> <img src="https://github.com/user-attachments/assets/29a9436f-f2a2-4c08-8af5-de642dfff22b" width="300"/>
+
+
+> ### View Members Page (Mobile View)  
+> <img src="https://github.com/user-attachments/assets/c289ddf9-079c-4189-bc93-ef8ea87d5414" width="300"/>
+
+
+
 
 ---
 
