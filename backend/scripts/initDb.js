@@ -41,5 +41,3 @@ export const initializeDatabase = async () => {
     process.exit(1);
   }
 };
-
-// Run the initialization
