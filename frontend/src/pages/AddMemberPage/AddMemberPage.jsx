@@ -154,7 +154,7 @@ function AddMemberPage() {
     }
 
     setLoading(true);
-    setSubmitMessage({ type: "", message: "" });
+    // setSubmitMessage({ type: "", message: "" });
 
     try {
       const formDataToSend = new FormData();
@@ -257,12 +257,6 @@ function AddMemberPage() {
         <p className="subtitle">
           Fill out the form below to add a new team member.
         </p>
-
-        {submitMessage.message && (
-          <div className={`message ${submitMessage.type}`}>
-            {submitMessage.message}
-          </div>
-        )}
 
         <form onSubmit={handleSubmit} className="add-member-form">
           <div className="form-columns">
@@ -437,6 +431,11 @@ function AddMemberPage() {
             </div>
           </div>
 
+          {submitMessage.message && (
+            <div className={`message ${submitMessage.type}`}>
+              {submitMessage.message}
+            </div>
+          )}
           <div className="form-actions">
             <button type="submit" className="btn btn-submit" disabled={loading}>
               {loading ? "Adding Member..." : "Add Member"}
