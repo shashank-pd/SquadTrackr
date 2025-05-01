@@ -7,7 +7,7 @@ function LandingPage() {
     <div className="landing-page">
       <section className="hero-section">
         <div className="card">
-          <h1>Welcome to TeamSync</h1>
+          <h1>Welcome to SquadTracker</h1>
           <p className="subtitle">
             Manage your team with ease. Add new members, view member profiles,
             and keep track of your team's information in one place.

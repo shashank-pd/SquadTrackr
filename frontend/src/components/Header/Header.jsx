@@ -7,8 +7,8 @@ function Header() {
       <div className="header-container">
         <div className="logo-container">
           <Link to="/" className="logo-link">
-            <img src="/fav.png" alt="Glitch Logo" className="logo-img" />
-            <span className="logo-text">Glitch</span>
+            <img src="/fav.png" alt="Squadtracker Logo" className="logo-img" />
+            <span className="logo-text">SquadTracker</span>
           </Link>
         </div>
         <nav className="nav">

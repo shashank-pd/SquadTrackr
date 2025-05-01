@@ -82,27 +82,29 @@ function MemberDetailsPage() {
       <div className="card">
         <div className="member-profile">
           <div className="profile-header">
-            <div className="profile-image-container">
-              {member.profileImage ? (
-                <img
-                  src={`${BACKEND_URL}/${member.profileImage}`}
-                  alt={member.name}
-                  className="profile-image"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "/api/placeholder/300/300";
-                  }}
-                />
-              ) : (
-                <div className="profile-image-placeholder">
-                  {member.name.charAt(0).toUpperCase()}
-                </div>
-              )}
-            </div>
+            <div className="profile-info-container">
+              <div className="profile-image-container">
+                {member.profileImage ? (
+                  <img
+                    src={`${BACKEND_URL}/${member.profileImage}`}
+                    alt={member.name}
+                    className="profile-image"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "/api/placeholder/300/300";
+                    }}
+                  />
+                ) : (
+                  <div className="profile-image-placeholder">
+                    {member.name.charAt(0).toUpperCase()}
+                  </div>
+                )}
+              </div>
 
-            <div className="profile-title">
-              <h1>{member.name}</h1>
-              <p className="member-role">{member.role}</p>
+              <div className="profile-title">
+                <h1>{member.name}</h1>
+                <p className="member-role">{member.role}</p>
+              </div>
             </div>
             <div className="back-link">
               <button onClick={() => navigate(-1)} className="btn-back">

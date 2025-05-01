@@ -33,6 +33,12 @@
 	gap: 2rem;
 }
 
+.profile-info-container {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
 .profile-image-container {
 	width: 150px;
 	height: 150px;
@@ -156,13 +162,27 @@
 		flex-direction: column;
 		text-align: center;
 		gap: 1rem;
+		margin-bottom: 3px;
 	}
 
 	.profile-image-container {
 		margin: 0 auto;
 	}
 
+	.profile-info-container {
+		flex-direction: column;
+	}
+
 	.info-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.profile-header {
+		flex-direction: column-reverse;
+	}
+
+	.back-link {
+		margin: 0;
+		align-self: self-start;
 	}
 }
