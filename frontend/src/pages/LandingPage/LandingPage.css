@@ -69,12 +69,14 @@
 
 .icon-add::before {
   content: "+";
+  font-style: normal;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 .icon-users::before {
   content: "👥";
+  font-style: normal;
 }
 
 .team-section {
