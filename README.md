@@ -1,6 +1,6 @@
 # SquadTrackr – Built for Teams That Build Together.
 
-A full-stack web application developed to manage student team members efficiently. Utilizing a **React.js frontend** and a **Node.js + Express backend**, this application offers features such as member addition, viewing, detailed profiles, and image uploads. All data is securely stored and managed using **MongoDB**. The app includes **data validation** to ensure proper field input and **error handling** for issues like invalid data, database errors, and file upload failures. The website is fully responsive and designed for both web and mobile views.
+A full-stack web application developed to manage student team members efficiently. Utilizing a **React.js frontend** and a **Node.js + Express backend**, this application offers features such as member addition, viewing, detailed profiles, and image uploads. All data is securely stored and managed using **MongoDB**. The app includes **data validation** to ensure proper field input and **error handling** for issues like invalid data, database errors, and file upload failures. The website is **fully responsive** and designed for both web and mobile views.
 
 ---
 
