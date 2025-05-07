@@ -13,11 +13,11 @@ A **MERN stack** full-featured web application for managing student teams effici
 
 ## 👨‍💻 Team Members
 
-| Name                | Registration Number | GitHub Profile                                              |
-| ------------------- | ------------------- | ----------------------------------------------------------- |
-| **Ayush Singh**     | RA2211027010231     | [Ayush-Singh24](https://github.com/Ayush-Singh24)           |
-| **Devansh Patel**   | RA2211027010228     | [Devansh-Patel-2929](https://github.com/Devansh-Patel-2929) |
-| **Shashank Prasad** | RA2211027010234     | [shashank-pd](https://github.com/shashank-pd)               |
+| Name                | GitHub Profile                                              |
+| ------------------- | ----------------------------------------------------------- |
+| **Ayush Singh**     | [Ayush-Singh24](https://github.com/Ayush-Singh24)           |
+| **Devansh Patel**   | [Devansh-Patel-2929](https://github.com/Devansh-Patel-2929) |
+| **Shashank Prasad** | [shashank-pd](https://github.com/shashank-pd)               |
 
 ---
 
